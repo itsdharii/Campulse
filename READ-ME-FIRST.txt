@@ -1,0 +1,7 @@
+CAMPULSE UPDATE - how to use
+1. Delete the old 'frontend' folder in your repo, then copy this 'frontend' folder in.
+2. Copy api.py and requirements.txt over the ones in your repo (replace).
+3. Copy start.ps1 into the repo root.
+4. Make a .env file (copy .env.example) and add your GROQ_API_KEY.
+5. Run: py -m pip install -r requirements.txt
+6. Run: .\start.ps1

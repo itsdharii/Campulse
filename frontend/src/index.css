@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    background:
+      radial-gradient(ellipse at 90% 0%, rgba(217,165,20,.12), transparent 32%),
+      radial-gradient(ellipse at 5% 18%, rgba(127,68,19,.08), transparent 30%), #F8F5EE;
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4 { @apply font-display tracking-tight text-ink; font-variant-numeric: lining-nums; }
+  ::selection { background: rgba(217,165,20,.35); }
+  :focus-visible { outline: 2px solid #D9A514; outline-offset: 2px; }
+  * { scrollbar-width: thin; scrollbar-color: #DDD7C9 transparent; }
+}
+
+@layer components {
+  .card { @apply rounded-xl border border-line bg-card shadow-card; }
+  .input {
+    @apply w-full rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-muted/70
+           transition focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/25;
+  }
+  .label { @apply text-[11px] font-semibold uppercase tracking-wider text-muted; }
+  .num { @apply font-display font-extrabold tracking-tight; font-variant-numeric: lining-nums; }
+}
+
+.recharts-tooltip-wrapper { outline: none; }
