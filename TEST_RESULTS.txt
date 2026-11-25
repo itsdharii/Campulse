@@ -1,0 +1,27 @@
+CREW SYNC — PHASE 3 TEST RESULTS
+================================
+
+Command:
+  python -W error::ResourceWarning -m unittest discover -v
+
+Result:
+  31 tests passed
+  0 failures
+  0 errors
+
+Coverage:
+  - 10 existing Phase 1 + Phase 2 integration tests
+  - 7 agent orchestration tests (mocked OpenAI Responses API)
+  - 3 session memory tests
+  - 11 approval / proposal / database transaction tests
+
+Additional check:
+  python -m compileall -q .
+  Passed.
+
+Live API status:
+  A live OpenAI request was not run in this build environment because no
+  OPENAI_API_KEY was supplied and the OpenAI SDK could not be installed here
+  (outbound package access is unavailable). Install requirements.txt and add
+  your own key to .env to run the live agent. Automated tests do not make API
+  calls or incur API charges.
